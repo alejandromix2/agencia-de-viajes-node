@@ -1,0 +1,47 @@
+extends ./layout/index
+
+
+block contenido
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, alt="imagen destino", class="img-fluid")
+            .col-md-7
+                h1.py-3 #{viaje.titulo}
+
+                p
+                    svg.icon.icon-tabler.icon-tabler-calendar-month(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#DC135F' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        path(d='M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z')
+                        path(d='M16 3v4')
+                        path(d='M8 3v4')
+                        path(d='M4 11h16')
+                        path(d='M7 14h.013')
+                        path(d='M10.01 14h.005')
+                        path(d='M13.01 14h.005')
+                        path(d='M16.015 14h.005')
+                        path(d='M13.015 17h.005')
+                        path(d='M7.01 17h.005')
+                        path(d='M10.01 17h.005')
+
+                    | #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+                p
+                    svg.icon.icon-tabler.icon-tabler-coins(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#DC135F' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        path(d='M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3z')
+                        path(d='M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4')
+                        path(d='M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598z')
+                        path(d='M3 6v10c0 .888 .772 1.45 2 2')
+                        path(d='M3 11c0 .888 .772 1.45 2 2')
+                    | #{viaje.precio}
+
+                p 
+                    svg.icon.icon-tabler.icon-tabler-user(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#DC135F' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        path(d='M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0')
+                        path(d='M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2')
+
+                    | #{viaje.disponibles}
+                p
+                    | #{viaje.descripcion} 
+                    
